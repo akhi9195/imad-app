@@ -2,6 +2,82 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
+var articleOne ={
+    title : 'Article one | Akhilesh Bashettiwar',
+    heading : ' Article one',
+    date : '07 August ,2017',
+    content: `  
+            <p>
+                This is Akhilesh and this is my artical notes.
+                This is Akhilesh and this is my artical notes.
+                This is Akhilesh and this is my artical notes.
+                This is Akhilesh and this is my artical notes.
+            </p>
+            <p>
+                This is Akhilesh and this is my artical notes.
+                This is Akhilesh and this is my artical notes.
+                This is Akhilesh and this is my artical notes.
+                This is Akhilesh and this is my artical notes.
+            </p>
+            <p>
+                This is Akhilesh and this is my artical notes.
+                This is Akhilesh and this is my artical notes.
+                This is Akhilesh and this is my artical notes.
+                This is Akhilesh and this is my artical notes.
+            </p>
+            `
+    
+};
+
+var htmlTemplate ={
+    
+    `
+    <html>
+    
+    <head>
+    <title>
+        Artile one Akhilesh bashettiwar
+    </title>
+           <meta name="viewport" content= "width=device-width, initial-scale=1"/>
+           <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        
+        <div class="container">
+        <div>
+            <a href="/">Home</a>
+        </div>
+        <hr>
+        <div>
+            <h3>My Artical</h3>
+        </div>
+        <div>
+            August 07, 2017
+        </div>
+        
+        <div>
+            <p>
+                This is Akhilesh and this is my artical notes.
+                This is Akhilesh and this is my artical notes.
+                This is Akhilesh and this is my artical notes.
+                This is Akhilesh and this is my artical notes.
+            </p>
+        </div>
+    <div>
+            <p>
+                This is Akhilesh and this is my artical notes.
+                This is Akhilesh and this is my artical notes.
+                This is Akhilesh and this is my artical notes.
+                This is Akhilesh and this is my artical notes.
+            </p>
+            <br>
+        </div>
+        </div>
+    </body>
+</html>
+    `
+}
+
 var app = express();
 app.use(morgan('combined'));
 
