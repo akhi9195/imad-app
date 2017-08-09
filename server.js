@@ -29,14 +29,18 @@ var articleOne ={
     
 };
 
-var htmlTemplate ={
-    
-    `
+function createTemplate(data){
+var title = data.title;
+var heading = data.heading;
+var date = data.date;
+var content = data.content;
+
+var htmlTemplate = `
     <html>
     
     <head>
     <title>
-        Artile one Akhilesh bashettiwar
+        ${title}
     </title>
            <meta name="viewport" content= "width=device-width, initial-scale=1"/>
            <link href="/ui/style.css" rel="stylesheet" />
@@ -49,35 +53,21 @@ var htmlTemplate ={
         </div>
         <hr>
         <div>
-            <h3>My Artical</h3>
+            ${heading}
         </div>
         <div>
-            August 07, 2017
+            ${date}
         </div>
         
         <div>
-            <p>
-                This is Akhilesh and this is my artical notes.
-                This is Akhilesh and this is my artical notes.
-                This is Akhilesh and this is my artical notes.
-                This is Akhilesh and this is my artical notes.
-            </p>
-        </div>
-    <div>
-            <p>
-                This is Akhilesh and this is my artical notes.
-                This is Akhilesh and this is my artical notes.
-                This is Akhilesh and this is my artical notes.
-                This is Akhilesh and this is my artical notes.
-            </p>
-            <br>
-        </div>
+            ${content}
         </div>
     </body>
 </html>
-    `
+    `;
+    
+    return htmlTemplate;
 }
-
 var app = express();
 app.use(morgan('combined'));
 
@@ -86,7 +76,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'artical-one.html'));
+  res.send(createTemplat(articleOne));
 });
 
 app.get('/article-two', function (req, res) {
