@@ -3,11 +3,10 @@ var morgan = require('morgan');
 var path = require('path');
 
 var articleOne ={
-    title : 'Article one | Akhilesh Bashettiwar',
-    heading : ' Article one',
-    date : '07 August ,2017',
-    content: `  
-            <p>
+    title: 'Article one | Akhilesh Bashettiwar',
+    heading: ' Article one',
+    date: '07 August ,2017',
+    content: `  <p>
                 This is Akhilesh and this is my artical notes.
                 This is Akhilesh and this is my artical notes.
                 This is Akhilesh and this is my artical notes.
@@ -29,7 +28,7 @@ var articleOne ={
     
 };
 
-function createTemplate(data){
+function createTemplate (data){
 var title = data.title;
 var heading = data.heading;
 var date = data.date;
