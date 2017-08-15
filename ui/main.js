@@ -6,13 +6,13 @@ button.onclick = function() {
     //create a request object
     var request = new XMLHttpRequest();
 
- request.onreaadystatechange = function(){
-    if(request.readyState ===XMLHttpRequest.DONE)
-    {
-        //take some action
+    //capture the response and store it in inner html
+    request.onreaadystatechange = function () {
+      if (request.readyState === XMLHttpRequest.DONE) {
+         //take some action
         if(request.status === 200)
         {
-            var counter= request.responseText;
+            var counter = request.responseText;
             var span = document.getElementById('count');
             span.innerHTML = counter.toString();
         }
@@ -21,7 +21,7 @@ button.onclick = function() {
 };
 
 //make request
-request.open('GET','http://akhi9195.imad.hasura-app.io/counter',true);
+request.open('GET', 'http://akhi9195.imad.hasura-app.io/counter', true);
 request.send(null);
 };
 
