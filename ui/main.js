@@ -1,11 +1,13 @@
+//counter code
 var button = document.getElementById('counter');
 
-   button.onclick = function(){
+button.onclick = function() {
 
-var request = new XMLHttprequest();
+    //create a request object
+    var request = new XMLHttpRequest();
 
  request.onreaadystatechange = function(){
-    if(request.readyState ===XMLHttprequest.DONE)
+    if(request.readyState ===XMLHttpRequest.DONE)
     {
         //take some action
         if(request.status === 200)
