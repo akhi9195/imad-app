@@ -10,15 +10,14 @@ alert("he");
     //capture the response and store it in inner html
     request.onreaadystatechange = function () {
         alert("hello");
-      if (request.readyState === XMLHttpRequest.DONE) {
+      
          //take some action
-        if(request.status === 200)
-        {
+         
             var counter = request.responseText;
             var span = document.getElementById('count');
             span.innerHTML = counter.toString();
-        }
-    }
+         
+    
     
 };
 
