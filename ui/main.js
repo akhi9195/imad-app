@@ -30,7 +30,7 @@ alert("he");
     }
   };
   xhttp.open("GET", "http://akhi9195.imad.hasura-app.io/counter", true);
-
+xhttp.send(null);
 //make request
 // request.open('GET', 'http://akhi9195.imad.hasura-app.io/counter', true);
 //request.send(null);
