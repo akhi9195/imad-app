@@ -3,16 +3,15 @@ var button = document.getElementById('counter');
 
 button.onclick = function() {
 
-alert("he");
     //create a request object
     var request = new XMLHttpRequest();
 
     //capture the response and store it in inner html
     request.onreadystatechange = function () {
-      
-      if (request.readyState == 4) {
+        alert("hello");
+      if (request.readyState === XMLHttpRequest.DONE) {
          //take some action
-        if(request.status == 200 || request.status == 304)
+        if(request.status === 200)
         {
             var counter = request.responseText;
             var span = document.getElementById('count');
