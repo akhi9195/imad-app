@@ -8,7 +8,7 @@ alert("he");
     var request = new XMLHttpRequest();
 
     //capture the response and store it in inner html
-    request.onreaadystatechange = function () {
+    request.onreadystatechange = function () {
         alert("hello");
       if (request.readyState == 4) {
          //take some action
