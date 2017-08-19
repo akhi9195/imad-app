@@ -1,8 +1,9 @@
 //counter code
-var button = document.getElementById('counter');
+var button = document.glletElementById('counter');
 
 button.onclick = function() {
 
+alert("he");
     //create a request object
     var request = new XMLHttpRequest();
 
