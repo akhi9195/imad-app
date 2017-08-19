@@ -23,6 +23,6 @@ button.onclick = function() {
 
 //make request
 request.open('GET', 'http://akhi9195.imad.hasura-app.io/counter', true);
-request.send(null);
+//request.send(null);
 };
 
