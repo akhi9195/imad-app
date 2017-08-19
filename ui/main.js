@@ -9,7 +9,7 @@ alert("he");
 
     //capture the response and store it in inner html
     request.onreadystatechange = function () {
-        alert("hello");
+      
       if (request.readyState == 4) {
          //take some action
         if(request.status == 200 || request.status == 304)
