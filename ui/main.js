@@ -8,6 +8,7 @@ button.onclick = function() {
 
     //capture the response and store it in inner html
     request.onreaadystatechange = function () {
+        alert("hello")
       if (request.readyState === XMLHttpRequest.DONE) {
          //take some action
         if(request.status === 200)
